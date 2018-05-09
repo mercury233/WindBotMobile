@@ -3,6 +3,7 @@ using Android.App;
 using Android.Widget;
 using Android.OS;
 using Android.Support.V7.App;
+using WindBot;
 
 namespace WindBotMobile
 {
@@ -18,10 +19,11 @@ namespace WindBotMobile
 
             Button button = FindViewById<Button>(Resource.Id.button1);
             button.Click += Test1;
-
-           // try
+            Program.Assets = this.Assets;
+            Program.InitAndroid();
+            // try
             //{
-                YGOSharp.OCGWrapper.NamedCardsManager.Init("/storage/emulated/0/ygocore/cards.cdb");
+            
 
             //}
            // catch (Exception e)
@@ -34,10 +36,11 @@ namespace WindBotMobile
         private void Test1(object sender, EventArgs e)
         {
             EditText textview = FindViewById<EditText>(Resource.Id.editText1);
-            YGOSharp.OCGWrapper.NamedCardsManager.Init("/storage/emulated/0/ygocore/cards.cdb");
-            YGOSharp.OCGWrapper.NamedCard card1 = YGOSharp.OCGWrapper.NamedCard.Get(22862454);
-
-            textview.Text = card1.Name;
+            //YGOSharp.OCGWrapper.NamedCardsManager.Init("/storage/emulated/0/ygocore/cards.cdb");
+            //YGOSharp.OCGWrapper.NamedCard card1 = YGOSharp.OCGWrapper.NamedCard.Get(22862454);
+            WindBotInfo Info = new WindBotInfo();
+            Program.Run(Info);
+            //textview.Text = card1.Name;
         }
     }
 }
