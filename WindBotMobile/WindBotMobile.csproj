@@ -66,6 +66,15 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
+    <Reference Include="YGOSharp.Network">
+      <HintPath>.\YGOSharp.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="YGOSharp.OCGWrapper">
+      <HintPath>.\YGOSharp.OCGWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="YGOSharp.OCGWrapper.Enums">
+      <HintPath>.\YGOSharp.OCGWrapper.Enums.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
