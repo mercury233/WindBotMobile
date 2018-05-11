@@ -46,11 +46,11 @@ namespace WindBot
             }
         }
 
-        public static void InitAndroid()
+        public static void InitAndroid(string databasePath)
         {
             Rand = new Random();
             DecksManager.Init();
-            NamedCardsManager.Init("/storage/emulated/0/ygocore/cards.cdb");
+            NamedCardsManager.Init(databasePath);
         }
 
         public static void InitDatas(string databasePath)
