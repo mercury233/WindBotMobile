@@ -18,5 +18,7 @@
         android:layout_below="@id/button1"
         android:id="@+id/editText1"
         android:editable="false"
-        android:gravity="top" />
+        android:gravity="top"
+        android:focusable="false"
+        android:scrollbars="vertical" />
 </RelativeLayout>

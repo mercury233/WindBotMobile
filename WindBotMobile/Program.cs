@@ -13,6 +13,7 @@ namespace WindBot
     {
         internal static Random Rand;
         public static Android.Content.Res.AssetManager Assets;
+        public static WindBotMobile.MainActivity MainActivity;
 
         internal static void Main(string[] args)
         {
